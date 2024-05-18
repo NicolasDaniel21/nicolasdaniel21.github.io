@@ -15,14 +15,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 .text {
-    font-size: 50px;
+    font-size: 70px;
     text-transform: uppercase;
 
-    position: relative;
-    top: -120px;
+    margin-bottom: 50px;
+    text-align: center;
 
     background: linear-gradient(to right, #0678BF, #C9CFDB, #4ABFD9, #525252, #4ACAD9, #0678BF);
     background-size: 500% 100%;
@@ -42,4 +43,34 @@ body {
     100% {
         background-position: 100%;
     }
+}
+
+.button {
+    align-items: center;
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #08459E;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    position: center;
+    transition: background-color 0.3s, color 0.1s;
+}
+
+.button-container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.button:hover {
+    background-color: #063375;
+    color: #01BFB7;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
