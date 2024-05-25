@@ -11,17 +11,16 @@
 </head>
 
 <body>
-    <canvas id="grafico1" style="width: 500px; height: 500px;"></canvas>
+    <canvas id="bar_graph" style="width: 500px; height: 500px;"></canvas>
 
     <div id="container">
         <h1>This is the Stock Chart project page!</h1>
 
         <form class="d-flex" action="" method="POST" id="myForm">
             <input class="form-control me-2" type="search" id="txtSymbol" placeholder="PETR4.SA" aria-label="Search">
-            <button class="btn btn-success">Search</button>
+            <button class="btn btn-success" onclick="validate()">Search</button>
         </form>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../scripts/stock_chart.js"></script>
