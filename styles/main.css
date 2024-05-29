@@ -148,12 +148,10 @@ body {
     border-radius: 15%;
     transition: 0.7s;
     transition-delay: 0s;
-    /* transform: rotate(350deg); */
 }
 
 .card:not(:hover) .img-box img {
     transition: 1.0s;
-    /* transform: rotate(-360deg); */
 }
 
 .card .content {
