@@ -12,61 +12,119 @@ function validate() {
     document.getElementById("error").style.display = "none";
     lineChartData = [["", 0, 0]];
     standartStock = selectedStock;
-    urlDaily = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${standartStock}.SA&interval=5min&apikey=${apiKey}`;
-    requestData(urlDaily);
+
+    urlDaily = "../queryPetr4.json";
   }
 }
 
-var apiKey = "695FRTH84RDJMAGE";
+var apiKey = "g3ikPvgYzawWpp9LuXoh43";
 
-var urlDaily = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${standartStock}.SA&interval=5min&apikey=${apiKey}`;
+urlDaily = "../queryPetr4.json";
 
 const ctx = document.getElementById("bar_graph");
 
 let labelsX = ["minimum", "average", "maximum"];
-let valores = [0, 0, 0];
 
-fetch(urlDaily)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok " + response.statusText);
-    }
-    return response.json();
-  })
+fetch("../queryPetr4.json")
+  .then((response) => response.json())
   .then((data) => {
-    console.log(urlDaily);
-    console.log(data);
+    const historicalData = data.results[0].historicalDataPrice;
 
-    const timeSeries = data["Time Series (Daily)"];
+    let dates = [],
+      highPrices = [],
+      lowPrices = [],
+      openPrices = [],
+      closePrices = [];
 
-    console.log(timeSeries);
+    let averagePrice = 0,
+      highestPrice = -Infinity,
+      lowestPrice = +Infinity;
 
-    for (const date in timeSeries) {
-      if (Object.hasOwnProperty.call(timeSeries, date)) {
-        dailyData = timeSeries[date];
-        console.log(`Date: ${date}`);
-        console.log(`Open: ${dailyData["1. open"]}`);
-        console.log(`High: ${dailyData["2. high"]}`);
-        console.log(`Low: ${dailyData["3. low"]}`);
-        console.log(`Close: ${dailyData["4. close"]}`);
-        console.log(`Volume: ${dailyData["5. volume"]}`);
+    for (const dailyData of historicalData) {
+      dates.push(convertUnixTimestampToDate(dailyData.date));
+      highPrices.push(dailyData.high);
+      lowPrices.push(dailyData.low);
+      openPrices.push(dailyData.open);
+      closePrices.push(dailyData.close);
+
+      if (dailyData.high > highestPrice) {
+        highestPrice = dailyData.high;
+      }
+
+      averagePrice += dailyData.close;
+
+      if (dailyData.low < lowestPrice) {
+        lowestPrice = dailyData.low;
       }
     }
 
+    console.log("highestPrice = " + highestPrice);
+
+    averagePrice = averagePrice / historicalData.length;
+    console.log("Average price = " + averagePrice);
+
+    console.log("Lowest price = " + lowestPrice);
+
+    let valores = [lowestPrice, averagePrice, highestPrice];
+
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
-        labels: labelsX,
+        labels: dates,
         datasets: [
           {
-            label: "# of votes",
-            data: valores,
-            borderWidth: 1,
+            label: "High Prices",
+            data: highPrices,
+            borderColor: "green",
+            fill: false,
+          },
+          {
+            label: "Low Prices",
+            data: lowPrices,
+            borderColor: "red",
+            fill: false,
+          },
+          {
+            label: "Open Prices",
+            data: openPrices,
+            borderColor: "blue",
+            fill: false,
+          },
+          {
+            label: "Close Prices",
+            data: closePrices,
+            borderColor: "orange",
+            fill: false,
           },
         ],
       },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: "Date",
+            },
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: "Price",
+            },
+          },
+        },
+      },
     });
   })
-  .catch((error) => {
-    console.error("There has been a problem with your fetch operation:", error);
-  });
+  .catch((error) => console.error("Error loading JSON:", error));
+
+function convertUnixTimestampToDate(timestamp) {
+  const date = new Date(timestamp * 1000);
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}

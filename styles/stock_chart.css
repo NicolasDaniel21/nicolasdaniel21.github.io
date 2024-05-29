@@ -37,3 +37,11 @@ form {
 .d-flex {
     margin-top: 0;
 }
+
+#bar_graph {
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(245, 245, 245);
+    width: 1064px;
+    height: 800px;
+}
