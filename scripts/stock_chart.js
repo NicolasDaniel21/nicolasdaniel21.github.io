@@ -1,25 +1,27 @@
 var standartStock = "PETR4";
+var apiKey = "g3ikPvgYzawWpp9LuXoh43";
+var urlDaily = "../queryPetr4.json";
 
-function validate() {
-  var selectedStock = document.getElementById("txtstandartStock").value;
-  standartStock = selectedStock;
 
-  if (selectedStock === undefined || standartStock == null) {
-    document.getElementById("error").style.display = "block";
-    document.getElementById("error").innerHTML = "Código de ação inválido!";
-    document.getElementById("txtstandartStock").focus();
+document.getElementById("myForm").addEventListener("submit", function (event) {
+  validate(event);
+});
+
+function validate(event) {
+  var selectedStock = document.getElementById("txtSymbol").value.trim();
+  
+  var inputField = document.getElementById("txtSymbol");
+
+  event.preventDefault();
+  inputField.classList.remove("error");
+
+  if (selectedStock === "" || selectedStock === undefined || selectedStock == null) {
+    void inputField.offsetWidth;
+    inputField.classList.add("error");
   } else {
-    document.getElementById("error").style.display = "none";
-    lineChartData = [["", 0, 0]];
     standartStock = selectedStock;
-
-    urlDaily = "../queryPetr4.json";
   }
 }
-
-var apiKey = "g3ikPvgYzawWpp9LuXoh43";
-
-urlDaily = "../queryPetr4.json";
 
 const ctx = document.getElementById("bar_graph");
 
