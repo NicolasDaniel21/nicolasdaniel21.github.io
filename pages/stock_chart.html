@@ -16,11 +16,13 @@
 
         <form class="d-flex" action="" method="POST" id="myForm">
             <input class="form-control me-2" type="search" id="txtSymbol" placeholder="PETR4.SA" aria-label="Search">
-            <button class="btn btn-success" id ="txtStandartStock">Search</button>
+            <button class="btn btn-success" id="txtStandartStock">Search</button>
         </form>
     </div>
 
-    <canvas id="bar_graph"></canvas>
+    <div id="chart-container">
+        <canvas id="bar_graph"></canvas>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../scripts/stock_chart.js"></script>

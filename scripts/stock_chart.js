@@ -2,20 +2,23 @@ var standartStock = "PETR4";
 var apiKey = "g3ikPvgYzawWpp9LuXoh43";
 var urlDaily = "../queryPetr4.json";
 
-
 document.getElementById("myForm").addEventListener("submit", function (event) {
   validate(event);
 });
 
 function validate(event) {
   var selectedStock = document.getElementById("txtSymbol").value.trim();
-  
+
   var inputField = document.getElementById("txtSymbol");
 
   event.preventDefault();
   inputField.classList.remove("error");
 
-  if (selectedStock === "" || selectedStock === undefined || selectedStock == null) {
+  if (
+    selectedStock === "" ||
+    selectedStock === undefined ||
+    selectedStock == null
+  ) {
     void inputField.offsetWidth;
     inputField.classList.add("error");
   } else {
