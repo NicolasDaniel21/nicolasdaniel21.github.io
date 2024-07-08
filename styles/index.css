@@ -106,11 +106,10 @@ body {
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
     transition: height 0.7s;
     margin-top: 450px;
-    right: 40%;
 }
 
 .card:hover {
-    height: 400px;
+    height: 380px;
 }
 
 .card .img-box {
@@ -145,15 +144,13 @@ body {
 .card:hover .img-box img {
     width: 130px;
     height: 130px;
-    border-radius: 15%;
+    border-radius: 13%;
     transition: 0.7s;
     transition-delay: 0s;
-    transform: rotate(350deg);
 }
 
 .card:not(:hover) .img-box img {
     transition: 1.0s;
-    transform: rotate(-360deg);
 }
 
 .card .content {
@@ -172,6 +169,7 @@ body {
 }
 
 .content h2 {
+    user-select: none;
     font-size: 30px;
     color: #3730a3;
 }
@@ -182,9 +180,16 @@ body {
 }
 
 .card .access-project {
-    background: linear-gradient(90deg, #3730a3, #7e22ce);
+    position: relative;
+    /* background: linear-gradient(90deg, #3730a3, #7e22ce); */
+    background: gray;
     padding: 12px;
     color: #fff;
     text-decoration: none;
     border-radius: 80px;
+    top: -11px;
+}
+
+.projectDescription {
+    font-size: 15px;
 }
