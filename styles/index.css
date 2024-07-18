@@ -108,7 +108,11 @@ body {
     margin-top: 450px;
 }
 
-.card:hover {
+.card.StockChart:hover {
+    height: 370px;
+}
+
+.card.DailyNasaImage:hover {
     height: 380px;
 }
 
@@ -174,6 +178,10 @@ body {
     color: #3730a3;
 }
 
+.card.DailyNasaImage .content h2 {
+    font-size: 30px;
+}
+
 .card:hover .content {
     top: 80px;
     max-height: 1000px;
@@ -181,7 +189,6 @@ body {
 
 .card .access-project {
     position: relative;
-    /* background: linear-gradient(90deg, #3730a3, #7e22ce); */
     background: gray;
     padding: 12px;
     color: #fff;
@@ -190,6 +197,16 @@ body {
     top: -11px;
 }
 
-.projectDescription {
-    font-size: 15px;
+.card.StockChart .projectDescription {
+    font-size: 14px;
+    text-align: center;
+}
+
+.card.DailyNasaImage .projectDescription {
+    font-size: 14px;
+}
+
+.card.DailyNasaImage .img-box .image {
+    height: 350px;
+    width: 350px;
 }
