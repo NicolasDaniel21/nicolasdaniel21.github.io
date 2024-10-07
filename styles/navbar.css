@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+BE+VLG:wght@100..400&family=Playwrite+CO:wght@100..400&display=swap');
+
+nav {
+  background-color: #000000;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+nav li {
+  position: relative;
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 7px 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.911);
+  border-radius: 25px;
+}
+
+nav a:hover {
+  background-color: hsl(212, 100%, 66%);
+  color: rgb(255, 255, 255);
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.hideOnMobile .text {
+  font-size: 20px;
+  line-height: 30px;
+  transition: 0.25s;
+}
+
+.hideOnMobile .text:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.hideOnMobile {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 150px;
+}
+
+.hideOnMobile .text {
+  position: relative;
+}
+
+.hideOnMobile .text::after {
+  content: '';
+  position: absolute;
+  left: 25px;
+  bottom: 22%;
+  width: 0;
+  height: 3px;
+  background-color: currentColor;
+  transition: width 0.4s ease;
+}
+
+.hideOnMobile .text#aboutMe:hover::after {
+  width: 55%;
+}
+
+.hideOnMobile .text#education:hover::after {
+  width: 57%;
+}
+
+.hideOnMobile .text#experiences:hover::after {
+  width: 61%;
+}
+
+.hideOnMobile .text#projects:hover::after {
+  width: 53%;
+}
+
+.hideOnMobile .text#contact:hover::after {
+  width: 51%;
+}
+
+.hideOnMobile .text#curriculum:hover::after {
+  width: 61%;
+}
+
+.logoLink {
+  display: inline-block;
+  overflow: hidden;
+  padding: 6px 15px;
+  right: -6px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.logoLink:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.logoDescription:hover {
+  color: white;
+}
+
+.navBar {
+  background-color: #000000;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.logoDescription {
+  position: relative;
+  top: -4px;
+  color: rgb(25, 228, 255);
+}

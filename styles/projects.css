@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+.projects_section .container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    font-family: 'Freeman', sans-serif;
+}
+
+.projects_section .row {
+    align-items: center;
+    position: relative;
+}
+
+.projects_section .col-md-6 {
+    position: relative;
+    top: 50px;
+}
+
+.projects_section .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.projects_section .button-container .button {
+    display: none;
+}
+
+.projects_section .content h2 {
+    background: linear-gradient(to right, #4acbd9d0, #4fe957, #4acbd9d0);
+    background-size: 500% 100%;
+    animation: gradient 5s infinite alternate;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+.projects_section .button {
+    align-items: center;
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #08459E;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.1s;
+}
+
+.projects_section .button:active {
+    background-color: #f7fafa;
+    color: #15e90e;
+}
+
+.projects_section .button:hover {
+    background-color: #000000;
+    color: #01BFB7;
+}
+
+.projects_section .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 180px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15);
+    transition: height 0.7s;
+    top: 0px;
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+.projects_section .card.StockChart:hover {
+    height: 370px;
+}
+
+.projects_section .card.DailyNasaImage:hover {
+    height: 380px;
+}
+
+.projects_section .card .img-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.7s, top 0.7s;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+.projects_section .card:hover .img-box {
+    top: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.projects_section .card .img-box img {
+    width: 99px;
+    height: 99px;
+    border-radius: 20%;
+    object-fit: contain;
+    transition-delay: 0.4s;
+    border-radius: 15px;
+}
+
+.projects_section .card:hover .img-box img {
+    width: 130px;
+    height: 130px;
+    border-radius: 13%;
+    transition: 0.7s;
+    transition-delay: 0s;
+}
+
+.projects_section .card:not(:hover) .img-box img {
+    transition: 1.0s;
+}
+
+.projects_section .card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    max-height: 35px;
+    overflow: hidden;
+    transition: top 0.7s, max-height 0.8s;
+    bottom: 0;
+}
+
+.projects_section .content h2 {
+    user-select: none;
+    font-size: 30px;
+    color: #3730a3;
+}
+
+.projects_section .card.DailyNasaImage .content h2 {
+    font-size: 30px;
+}
+
+.projects_section .card:hover .content {
+    top: 80px;
+    max-height: 1000px;
+}
+
+.projects_section .card .access-project {
+    position: relative;
+    background: gray;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 80px;
+    top: -11px;
+}
+
+.projects_section .card.StockChart .projectDescription {
+    font-size: 14px;
+    text-align: center;
+}
+
+.projects_section .card.DailyNasaImage .projectDescription {
+    font-size: 14px;
+}
+
+.projects_section .card.DailyNasaImage .img-box .image {
+    height: 350px;
+    width: 350px;
+}
+
+#projects_title {
+    color: #4acbd9d0;
+    background-color: black;
+    
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 5px;
+
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-align: center;
+    margin: 0px;
+    position: absolute;
+    font-size: 141px;
+    height: 800px;
+    left: -9px;
+}
+
