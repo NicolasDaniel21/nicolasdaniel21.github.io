@@ -212,17 +212,21 @@
     color: #4acbd9d0;
     background-color: black;
     
-    padding-top: 40px;
+    /* padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 5px;
+    padding-left: 5px; */
+    padding: 0.5rem;
 
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     text-align: center;
     margin: 0px;
     position: absolute;
-    font-size: 141px;
-    height: 800px;
-    left: -9px;
+    /* font-size: 141px; */
+    font-size: 4.19rem;
+    /* height: 800px; */
+    height: 850px;
+    /* left: -9px; */
+    left: 0px;
 }
 
