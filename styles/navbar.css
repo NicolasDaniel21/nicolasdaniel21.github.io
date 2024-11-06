@@ -114,7 +114,7 @@ nav li:first-child {
   left: 25px;
   bottom: 22%;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: currentColor;
   transition: width 0.4s ease;
 }
@@ -146,10 +146,13 @@ nav li:first-child {
 .logoLink {
   display: inline-block;
   overflow: hidden;
-  padding: 6px 15px;
+  padding: 9px 1px;
   right: -6px;
   position: relative;
   transition: 0.5s;
+
+  font-size: 1.04rem;
+  width: 100%;
 }
 
 .logoLink:hover {
@@ -167,8 +170,46 @@ nav li:first-child {
   font-family: "Bebas Neue", sans-serif;
 }
 
+.topName {
+  right: -0.4rem;
+  position: relative;
+  top: -0.2rem;
+}
+
 .logoDescription {
   position: relative;
-  top: -4px;
   color: rgb(25, 228, 255);
+  top: -0.4rem;
+}
+
+.hideOnMobile .text {
+  font-size: 1.17rem;
+}
+
+@media (max-width: 1200px) {
+  li {
+    width: 320px;
+  }
+
+  .topName {
+    right: -1.8rem;
+  }
+
+  nav a {
+    height: 150%;
+  }
+
+  .logoDescription {
+    left: -0.4rem;
+  }
+
+  .hideOnMobile .text {
+    font-size: 0.97rem;
+    top: -22%;
+  }
+
+  .hideOnMobile .text::after {
+    top: 63%;
+    left: 22px;
+  }
 }

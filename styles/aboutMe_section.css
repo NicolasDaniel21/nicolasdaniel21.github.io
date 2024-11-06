@@ -15,18 +15,23 @@
 }
 
 #profile_image {
-    width: 400px;
-    height: auto;
+    /* width: 400px; */
+    width: 21vw;
+    height: auto;   
+    max-width: 400px;
+
     border-radius: 100%;
-    /* margin-right: 35px; */
-    /* right: -75px; */
-    align-items: center;
+    /* align-items: center; */
     position: relative;
-    top: -30px;
+    top: -3.33vh;
+
     border: 2px solid white;
+
+    margin-right: auto;
+    margin-left: -0.5vw;
 }
 
-.about-me_section .welcomeText {
+.welcomeText_section .welcomeText {
     position: absolute;
     font-size: 110px;
     text-align: center;
@@ -41,6 +46,19 @@
     width: 100%;
     user-select: none;
     left: 0px;
+
+    font-family: 'Freeman', sans-serif;
+
+    /* overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    font-family: 'Freeman', sans-serif;
+    max-width: 1705px;
+    margin-left: 202px;
+    margin-right: 0px;
+    align-items: center; */
 }
 
 .welcomeText {
@@ -65,31 +83,51 @@
 #aboutMe_text {
     color: aliceblue;
     font-size: 1.6rem;
-    right: -110px;
+    right: 55px;
     position: relative;
-    top: -20px;
+    top: -40px;
     text-align: center;
     width: 64%;
     overflow: hidden;
     line-height: 1.25;
+
+    margin: 2rem;
+    padding: 1rem;
 }
 
-/* Ajustes de responsividade para telas menores */
 @media (max-width: 1200px) {
-    .about-me_section .welcomeText {
-        font-size: 4.2rem; /* Reduz um pouco em telas grandes */
-        top: 14%;
-    }
-}
 
-@media (max-width: 900px) {
-    .about-me_section .welcomeText {
-        font-size: 70px; /* Reduz ainda mais em telas médias */
+    .container, .about-me_section {
+        max-width: 1200px;
     }
-}
 
-@media (max-width: 600px) {
-    .about-me_section .welcomeText {
-        font-size: 50px; /* Para dispositivos móveis */
+    .about-me_section .container {
+        margin-left: 95px;
+    }
+
+    #aboutMe_text {
+        font-size: 1.6rem;
+        right: 353px;
+        top: 113px;
+        text-align: center;
+        width: 69%;
+        overflow: hidden;
+        line-height: 1.25;
+        margin: 0.2rem;
+        padding: 0rem;
+    }
+
+    .welcomeText_section .welcomeText {
+        font-size: 4.2rem;
+        top: 9%;
+        margin-left: 1.5vw;
+
+        margin: 2rem;
+        padding: 1rem;
+    }
+
+    #profile_image {
+        top: -26.33vh;
+        margin-left: 1.5vw;
     }
 }
