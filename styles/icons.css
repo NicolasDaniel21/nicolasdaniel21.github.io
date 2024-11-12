@@ -2,8 +2,8 @@
     border-radius: 1rem;
     height: 48px;
     width: auto;
-    left: 780px;
-    top: 54px;
+    left: -54px;
+    top: 51px;
     position: relative;
 }
 
@@ -11,16 +11,47 @@
     border-radius: 1rem;
     height: 48px;
     width: auto;
-    left: 728px;
-    top: 146px;
+    left: -73px;
+    top: 53px;
     position: relative;
 }
 
 #harvard_icon {
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     height: 54px;
     width: auto;
-    left: 1431px;
-    top: 61px;
+    /* left: 1431px; */
+    top: -3px;
     position: relative;
 }
+
+#topway_icon {
+    height: 53px;
+    width: auto;
+    display: inline-block;
+    /* left: 85.9rem; */
+    position: relative;
+    top: 0.5rem;
+    border-radius: 0.7rem;
+}
+
+#ebac_icon {
+    height: 52px;
+    width: auto;
+    display: inline-block;
+    /* left: 80.9rem; */
+    position: relative;
+    top: 1.2rem;
+    border-radius: 0.7rem;
+}
+
+#rocketseat_icon {
+    height: 3.4rem;
+    width: auto;
+    display: inline-block;
+    /* left: 76.6rem; */
+    position: relative;
+    top: 0.2rem;
+    border-radius: 0.7rem;
+}
+

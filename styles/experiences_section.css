@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+#experiences_title {
+    color: #4acbd9d0;
+    background-color: black;
+    padding: 0.5rem;
+    writing-mode: vertical-rl;
+    top: 145rem;
+    transform: rotate(-180deg);
+    text-align: center;
+    margin: 0px;
+    position: absolute;
+    font-size: 4.19rem;
+    height: 81vh;
+    left: 0px;
+    font-family: 'Freeman', sans-serif;
+    user-select: none;
+}
+
+#experiences_section {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+  
+#experiences_title {
+    align-self: flex-start;
+    margin: 0;
+}
+
+#altus_box {
+    top: 2rem;
+    left: 30rem;
+}
+
+#altus_icon {
+    position: relative;
+    left: 20rem;
+    width: 5%;
+    height: auto;
+    top: 10rem;
+    border-radius: 1.3rem;
+}
+
+#altus_text {
+    color: #ffffff;
+    left: 25rem;
+    position: relative;
+    top: 3rem;
+    font-family: 'Freeman', sans-serif;
+    font-size: 1.2rem;
+}

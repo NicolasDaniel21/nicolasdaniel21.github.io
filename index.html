@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/parallax.css">
   <link rel="stylesheet" href="styles/aboutMe_section.css">
   <link rel="stylesheet" href="styles/education_section.css">
+  <link rel="stylesheet" href="styles/experiences_section.css">
   <link rel="stylesheet" href="styles/scrollbar.css">
   <link rel="stylesheet" href="styles/projects.css">
   <link rel="stylesheet" href="styles/icons.css">
@@ -78,24 +79,27 @@
   <h1 id="education_title">EDUCATION</h1>
   <section id="education_section">
     <div id="icons">
-      <img id="unisinos_icon" src="icons/unisinos_icon.png">
-      <img id="liberato_icon" src="icons/liberato_icon.png">
       <img id="harvard_icon" src="icons/harvard_icon.png">
+      <img id="topway_icon" src="icons/topway_icon.png">
+      <img id="ebac_icon" src="icons/ebac_icon.png">
+      <img id="rocketseat_icon" src="icons/rocketseat_icon.png">
     </div>
     <div id="education_text" style="white-space: pre-wrap;">
     <div id="institutional_background">
-      <span style="color: #ffbf35;">Institutional Background</span>
-      <span style="color: #88c7ff;">      Unisinos University (2022 - Expected 2027)</span>
-                 Pursuing a Bachelor's degree in Computer Science.
+      <span style="color: #ffbf35; font-size: 3rem; top: 2rem; position: relative;">Institutional Background</span>      
+      <img id="unisinos_icon" src="icons/unisinos_icon.png">
+      <span style="color: #88c7ff;">  Unisinos University (2022 - Expected 2027)</span>
+                Pursuing a Bachelor's degree in Computer Science.
           
-          <span style="color: #88c7ff;">  Liberato Salzano Vieira da Cunha Technical School (2018 - 2021)</span>
+          <img id="liberato_icon" src="icons/liberato_icon.png">
+      <span style="color: #88c7ff;">  Liberato Salzano Vieira da Cunha Technical School (2018 - 2021)</span>
                 Completed a <span style="color: #4fff3f;">Technical course in Electronics</span> alongside high school education.
                 Participated in the 23rd Technology and Science Internal Fair (2019).
                 Took part in an introductory programming course during the program (2019).
     </div>
     
     <div id="certifications_and_trainings">
-        <span style="color: #ffbf35;">Certifications and Trainings</span>
+        <span style="color: #ffbf35; font-size: 3rem; top: -1rem; position: relative;">Certifications and Trainings</span>
             <span style="color: #88c7ff;">      Harvard University - CS50x (Expected December 2024)</span>
                         Currently enrolled in CS50's Introduction to Computer Science, a comprehensive 
                         online programming course with over 110 hours of content.
@@ -111,9 +115,28 @@
                         Completed the NLW Expert learning path, focusing on HTML, CSS, and JavaScript 
                         (5 hours).
     </div>
-  </div>
   </section>
   <section></section>
+
+  <section id="experiences_section" class="experiences_section">
+    <h1 id="experiences_title">EXPERIENCES</h1>
+    <div id="altus_box">
+      <img id="altus_icon" src="icons/altus_icon.png">
+        <pre id="altus_text">
+          <span style="font-size: 2.5rem;">Test Engineer Intern</span>
+          <span style="color: #88c7ff;">Altus Automation Systems S.A</span>
+          mar/2022 - aug/2023 · 1y 5mo
+          São Leopoldo, Rio Grande do Sul, Brazil · on-site
+          - In the Test Engineering team at Altus, I dealt with challenges related to software and hardware
+          - I developed and performed maintenance on test software using LabVIEW
+          - Contributed to a project to develop test firmware for a module, using the C language in the CubeIDE environment
+          - Developed initialization scripts and fixed bugs in Shellscript, in the Linux environment
+        </pre>
+    </div>
+  </section>
+
+  <section></section>
+
   <section id="projects_section" class="projects_section">
     <div class="container">
       <h1 id="projects_title">PROJECTS</h1>
@@ -155,6 +178,7 @@
       </div>
     </div>
   </section>
+
   <section></section>
 
   <script src="scripts/navbar.js"></script>

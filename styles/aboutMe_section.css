@@ -15,18 +15,13 @@
 }
 
 #profile_image {
-    /* width: 400px; */
-    width: 21vw;
-    height: auto;   
+    width: 20vw;
+    height: auto;
     max-width: 400px;
-
     border-radius: 100%;
-    /* align-items: center; */
     position: relative;
     top: -3.33vh;
-
     border: 2px solid white;
-
     margin-right: auto;
     margin-left: -0.5vw;
 }
@@ -42,23 +37,11 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     outline: none;
-    top: 10%;
+    top: 13%;
     width: 100%;
     user-select: none;
     left: 0px;
-
     font-family: 'Freeman', sans-serif;
-
-    /* overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    font-family: 'Freeman', sans-serif;
-    max-width: 1705px;
-    margin-left: 202px;
-    margin-right: 0px;
-    align-items: center; */
 }
 
 .welcomeText {
@@ -78,19 +61,19 @@
     color: #4acbd9d0;
     background-color: black;
     padding: 0.44rem;
+    user-select: none;
 }
 
 #aboutMe_text {
     color: aliceblue;
     font-size: 1.6rem;
-    right: 55px;
+    right: 56px;
     position: relative;
     top: -40px;
     text-align: center;
     width: 64%;
     overflow: hidden;
     line-height: 1.25;
-
     margin: 2rem;
     padding: 1rem;
 }
