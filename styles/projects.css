@@ -7,14 +7,17 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
     font-family: 'Freeman', sans-serif;
 }
 
 .projects_section .row {
-    align-items: center;
     position: relative;
-    top: -7rem;
+    top: 15rem;
+    display: flex;
+    width: 30rem;
+    flex-wrap: nowrap;
+    right: 5rem;
+    gap: 3rem;
 }
 
 .projects_section .col-md-6 {
