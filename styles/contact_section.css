@@ -33,31 +33,85 @@
   color: #ffffffe7;; /* Cor do ícone */
   position: relative; /* Posicionamento relativo, caso precise de ajustes adicionais */
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .icons_row {
-    right: -20rem;
-    top: 9rem;
-    gap: 16rem;
+    right: -28rem;
+    top: 16rem;
+    gap: 10rem;
     display: flex;
     position: relative;
-    width: 86rem;
+    width: 103rem;
 }
 
-.icon-circle {
-    transition: transform 0.5s ease;
+.bi-whatsapp {
+    color: white; /* Cor padrão do ícone */
+    top: -0.2rem;
+    position: relative;
 }
 
-.bi-telephone-fill {
+#whatsapp_circle {
+    background-color: rgba(211, 211, 211, 0.6); /* Cor de fundo padrão (cinza claro) */
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+#whatsapp_circle:hover {
+    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.2); /* Efeito de escala */
+}
+
+#whatsapp_circle:hover .bi-whatsapp {
+    color: #2AED63; /* Verde ao passar o mouse sobre o círculo */
+}
+
+#gmail_icon {
+    width: 64px;
+    height: 64px;
+    filter: brightness(0) invert(1); /* Deixa o ícone branco */
+    transition: filter 0.3s ease; /* Suaviza a transição */
+}
+
+#email_circle {
+    background-color: rgba(211, 211, 211, 0.6); /* Cor de fundo padrão (cinza claro) */
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+#email_circle:hover #gmail_icon {
+    filter: none;
+}
+
+#email_circle:hover {
+    transform: scale(1.2);
+    background-color: white;
+}
+
+#linkedin_circle:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease, background-color 0.3s ease;
+    background-color: #0077B5;
     color: white;
 }
 
-.icon-circle:hover {
-    transition: transform 0.5s ease;
-    background-color: #007bff; /* Altere para a cor de fundo que você preferir */
-    color: white; /* Altere para a cor do ícone ao passar o mouse */
-    transform: scale(1.2);
+#github_icon { 
+    filter: grayscale(1);
 }
+
+#github_circle:hover #github_icon {
+    filter: none;
+}
+
+#github_circle:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease, background-color 0.3s ease;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* #0077B5 */
+
 
 .contact_text_row {
     right: -17rem;
@@ -74,22 +128,35 @@
 }
 
 .tooltip {
-    visibility: hidden; /* Torna o pop-up invisível por padrão */
-    width: 200px; /* Largura do pop-up */
-    background-color: black; /* Cor de fundo do pop-up */
-    color: #fff; /* Cor do texto */
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
     text-align: center;
     border-radius: 5px;
     padding: 10px;
     position: absolute;
-    bottom: 100%; /* Aparece acima do ícone */
-    left: 50%; /* Centraliza o pop-up */
-    transform: translateX(-50%); /* Ajuste fino para garantir que esteja centralizado */
-    opacity: 0; /* Torna o pop-up transparente */
-    transition: opacity 0.3s ease; /* Efeito de transição para suavizar o aparecimento */
-  }
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: 35px;
+}
   
-  .icon-circle:hover .tooltip {
-    visibility: visible; /* Torna o pop-up visível quando o mouse estiver sobre o ícone */
-    opacity: 1; /* Torna o pop-up opaco */
-  }
+.icon-circle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+#popup {
+    position: fixed; /* Para que ele siga o mouse na janela inteira */
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do popup */
+    color: white; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho do texto */
+    pointer-events: none; /* Garante que o popup não interfira no mouse */
+    display: none; /* Esconde o popup por padrão */
+    z-index: 1000; /* Para garantir que fique acima dos outros elementos */
+}

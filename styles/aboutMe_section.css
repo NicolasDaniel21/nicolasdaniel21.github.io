@@ -14,17 +14,32 @@
     align-items: center;
 }
 
-#profile_image {
-    width: 20vw;
-    height: auto;
-    max-width: 400px;
-    border-radius: 100%;
+.profile_image_container {
+    width: 20vw; /* Define o tamanho do círculo */
+    height: 20vw; /* Garante proporção circular */
+    max-width: 400px; /* Define o tamanho máximo */
+    max-height: 400px; /* Define a altura máxima */
+    border-radius: 50%; /* Torna o contêiner um círculo */
+    border: 2px solid white; /* Borda externa */
     position: relative;
-    top: -3.33vh;
-    border: 2px solid white;
-    margin-right: auto;
-    margin-left: -0.5vw;
+    overflow: hidden; /* Garante que a imagem não "escape" do círculo */
+    display: flex; /* Centraliza a imagem dentro do círculo */
+    justify-content: center;
+    align-items: center;
 }
+
+#profile_image {
+    width: 100%; /* Faz a imagem preencher o contêiner */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem seja cortada corretamente para caber no círculo */
+    transition: transform 0.3s ease; /* Animação de zoom */
+}
+
+#profile_image:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+
 
 .welcomeText_section .welcomeText {
     position: absolute;
@@ -67,7 +82,7 @@
 #aboutMe_text {
     color: aliceblue;
     font-size: 1.6rem;
-    right: 56px;
+    right: -56px;
     position: relative;
     top: -40px;
     text-align: center;

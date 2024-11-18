@@ -1,21 +1,22 @@
-const iconCircle = document.getElementById('icon-circle');
-const tooltip = document.getElementById('tooltip');
+const popup = document.getElementById("popup");
 
-iconCircle.addEventListener('mousemove', (e) => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+/* tooltip for the contact section */
+document.querySelectorAll(".icon-circle").forEach((icon) => {
+    icon.addEventListener("mouseenter", (event) => {
+        const tooltipText = icon.getAttribute("data-tooltip");
+        popup.textContent = tooltipText;
+        popup.style.display = "block";
+    });
 
-  // Ajuste a posição do tooltip
-  tooltip.style.left = mouseX + 10 + 'px';  // 10px para afastar um pouco do cursor
-  tooltip.style.top = mouseY + 10 + 'px';   // 10px para afastar um pouco do cursor
-});
+    icon.addEventListener("mousemove", (event) => {
+        const offsetX = 15; // Distância horizontal do cursor
+        const offsetY = 15; // Distância vertical do cursor
 
-iconCircle.addEventListener('mouseenter', () => {
-  tooltip.style.visibility = 'visible';  // Torna o tooltip visível
-  tooltip.style.opacity = '1';           // Torna o tooltip opaco
-});
+        popup.style.left = event.clientX + offsetX + "px";
+        popup.style.top = event.clientY + offsetY + "px";
+    });
 
-iconCircle.addEventListener('mouseleave', () => {
-  tooltip.style.visibility = 'hidden';  // Torna o tooltip invisível
-  tooltip.style.opacity = '0';          // Torna o tooltip transparente
+    icon.addEventListener("mouseleave", () => {
+        popup.style.display = "none";
+    });
 });

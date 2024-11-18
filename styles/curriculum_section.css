@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+#curriculum_section {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#curriculum_title {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-align: center;
+    position: absolute;
+    font-size: 4.19rem;
+    color: #4acbd9d0;
+    background-color: black;
+    padding: 0.5rem;
+    left: 0px;
+    height: 739px;
+    font-family: 'Freeman', sans-serif;
+    user-select: none;
+}
+
+.resumes_row {
+    display: flex;
+    gap: 23rem;
+    top: 1rem;
+    position: static;
+    align-items: center;
+    right: 15rem;
+    position: relative;
+}
+
+.resume {
+    transform: scale(10);
+    transition: 0.5s;
+    background-color: black;
+    border-radius: 0.2rem;
+    height: 2rem;
+    max-height: 1.5rem;
+
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.curriculum_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume:hover {
+    transform: scale(12);
+    color: white
+}
+
+#resumes_description_row {
+    font-family: 'Freeman', sans-serif;
+    top: -10rem;
+    right: -13.9rem;
+    position: relative;
+    color: white;
+    width: 31rem;
+    display: flex;
+    gap: 19.3rem;
+    height: 2rem;
+    font-size: 2rem;
+}

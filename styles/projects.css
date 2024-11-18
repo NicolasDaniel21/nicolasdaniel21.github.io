@@ -12,11 +12,11 @@
 
 .projects_section .row {
     position: relative;
-    top: 15rem;
+    top: 12rem;
     display: flex;
     width: 30rem;
     flex-wrap: nowrap;
-    right: 5rem;
+    right: 10rem;
     gap: 3rem;
 }
 
