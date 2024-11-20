@@ -65,3 +65,12 @@
     height: 2rem;
     font-size: 2rem;
 }
+
+#PT-BR, #EN-US {
+    transition: 0.3s linear;
+}
+
+#PT-BR:hover, #EN-US:hover {
+    color: rgb(42, 159, 255);
+    transition: 0.2s linear;
+}

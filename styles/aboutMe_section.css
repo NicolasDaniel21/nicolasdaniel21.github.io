@@ -39,8 +39,6 @@
     transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
 }
 
-
-
 .welcomeText_section .welcomeText {
     position: absolute;
     font-size: 110px;
@@ -80,16 +78,24 @@
 }
 
 #aboutMe_text {
+    transition: 1s;
+}
+
+#aboutMe_text:hover {
+    transform: scale(1.025); /* Combina o rotate com o scale */
+    transition: 0.5s;
+}
+
+#aboutMe_text {
     color: aliceblue;
     font-size: 1.6rem;
-    right: -56px;
+    right: -86px;
     position: relative;
     top: -40px;
     text-align: center;
     width: 64%;
     overflow: hidden;
     line-height: 1.25;
-    margin: 2rem;
     padding: 1rem;
 }
 
