@@ -20,7 +20,7 @@
 #experiences_section {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
+    height: 110vh;
 }
   
 #experiences_title {
@@ -28,21 +28,29 @@
     margin: 0;
 }
 
-#altus_box {
+#altus_box, #adp_box {
     top: 2rem;
     left: 30rem;
 }
 
-#altus_icon {
+#altus_icon, #adp_icon {
     position: relative;
     left: 20rem;
     width: 5%;
     height: auto;
     top: 10rem;
     border-radius: 1.3rem;
+    transition: 0.2s;
 }
 
-#altus_text {
+#altus_icon:hover, #adp_icon:hover {
+    transform:
+        scale(1.2)
+        rotate(-10deg);
+    transition: 0.2s;
+}
+
+#altus_text, #adp_text {
     color: #ffffff;
     left: 25rem;
     position: relative;
@@ -50,7 +58,6 @@
     font-family: 'Freeman', sans-serif;
     font-size: 1.2rem;
 }
-
 
 #altus_icon {
     transition: 0.2s;
@@ -68,16 +75,16 @@
     color: orange;
 }
 
-#altus_position_title:hover {
+#altus_position_title:hover, #adp_position_title:hover {
     color: #ffffff;
     transition: 0.2s;
 }
 
-#altus_company_name {
+#altus_company_name, #adp_company_name {
     color: #88c7ff;
 }
 
-#altus_company_name:hover {
+#altus_company_name:hover, #adp_company_name:hover {
     color: white;
     transition: 0.2s;
 }
