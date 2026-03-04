@@ -1,0 +1,12 @@
+/* Combined imports - keep order as in index.html */
+@import url("general.css");
+@import url("navbar.css");
+@import url("parallax.css");
+@import url("aboutMe_section.css");
+@import url("education_section.css");
+@import url("experiences_section.css");
+@import url("scrollbar.css");
+@import url("projects.css");
+@import url("icons.css");
+@import url("contact_section.css");
+@import url("curriculum_section.css");
