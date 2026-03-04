@@ -66,11 +66,11 @@
     font-size: 2rem;
 }
 
-#PT-BR, #EN-US {
+#RESUME, #COVER-LETTER {
     transition: 0.3s linear;
 }
 
-#PT-BR:hover, #EN-US:hover {
+#RESUME:hover, #COVER-LETTER:hover {
     color: rgb(42, 159, 255);
     transition: 0.2s linear;
 }

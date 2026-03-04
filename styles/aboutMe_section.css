@@ -9,9 +9,17 @@
     height: 100%;
     font-family: 'Freeman', sans-serif;
     max-width: 1705px;
-    margin-left: 350px;
-    margin-right: 0px;
+    margin: 0 auto;
     align-items: center;
+}
+
+/* Center the about-me section content in the viewport */
+#about-me_section {
+    position: relative; /* allow absolute positioning of the vertical title */
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcomeText_section .welcomeText {
@@ -51,27 +59,31 @@
     padding: 0.44rem;
     user-select: none;
 }
-
+/* ABOUT ME text block - unified */
 #aboutMe_text {
     transition: 1s;
-}
-
-#aboutMe_text:hover {
-    transform: scale(1.025); /* Combina o rotate com o scale */
-    transition: 0.5s;
-}
-
-#aboutMe_text {
-    color: aliceblue;
-    font-size: 1.6rem;
-    right: -86px;
+    color: #dfeef9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* increased for readability */
+    line-height: 1.9;
+    max-width: 1350px;
+    margin: 0 auto;
+    text-align: left;
+    overflow: visible;
+    padding: 2rem 2.9rem;
     position: relative;
-    top: -40px;
+}
+
+/* Center only the first line inside #aboutMe_text */
+#aboutMe_text .center-line {
+    display: block;
     text-align: center;
-    width: 64%;
-    overflow: hidden;
-    line-height: 1.25;
-    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 2rem; /* larger heading */
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
 @media (max-width: 1200px) {
@@ -81,26 +93,20 @@
     }
 
     .about-me_section .container {
-        margin-left: 95px;
+        margin: 0 auto;
     }
 
     #aboutMe_text {
-        font-size: 1.6rem;
-        right: 353px;
-        top: 113px;
-        text-align: center;
-        width: 69%;
-        overflow: hidden;
-        line-height: 1.25;
-        margin: 0.2rem;
-        padding: 0rem;
+        font-size: 1.25rem;
+        margin: 1rem auto;
+        padding: 1rem;
+        line-height: 1.6;
     }
 
     .welcomeText_section .welcomeText {
         font-size: 4.2rem;
         top: 9%;
         margin-left: 1.5vw;
-
         margin: 2rem;
         padding: 1rem;
     }

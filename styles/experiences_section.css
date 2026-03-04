@@ -70,21 +70,11 @@
     transition: 0.2s;
 }
 
-#altus_position_title {
+#altus_position_title, #adp_position_title {
     font-size: 2.5rem;
     color: orange;
 }
 
-#altus_position_title:hover, #adp_position_title:hover {
-    color: #ffffff;
-    transition: 0.2s;
-}
-
 #altus_company_name, #adp_company_name {
     color: #88c7ff;
-}
-
-#altus_company_name:hover, #adp_company_name:hover {
-    color: white;
-    transition: 0.2s;
 }

@@ -107,13 +107,10 @@
     margin: 10px;
 }
 
-.projects_section .card.StockChart:hover {
-    height: 22rem;
+.projects_section .card.devMatch:hover {
+    height: 25rem;
 }
 
-.projects_section .card.DailyNasaImage:hover {
-    height: 23rem;
-}
 
 .projects_section .card .img-box {
     position: absolute;
@@ -143,6 +140,11 @@
     transition-delay: 0.4s;
     border-radius: 15px;
 }
+
+/* Slightly round the devMatch icon more for a softer look */
+/* .projects_section .card.devMatch:hover .img-box img {
+    border-radius: 30px;
+} */
 
 .projects_section .card:hover .img-box img {
     width: 130px;
@@ -177,9 +179,6 @@
     color: #3730a3;
 }
 
-.projects_section .card.DailyNasaImage .content h2 {
-    font-size: 30px;
-}
 
 .projects_section .card:hover .content {
     top: 80px;
@@ -196,19 +195,12 @@
     top: -11px;
 }
 
-.projects_section .card.StockChart .projectDescription {
+.projects_section .card.devMatch .projectDescription {
     font-size: 14px;
     text-align: center;
 }
 
-.projects_section .card.DailyNasaImage .projectDescription {
-    font-size: 14px;
-}
 
-.projects_section .card.DailyNasaImage .img-box .image {
-    height: 350px;
-    width: 350px;
-}
 
 #projects_title {
     color: #4acbd9d0;
@@ -225,13 +217,4 @@
     left: 0px;
     user-select: none;
 }
-
-#coming_soon_icon {
-    height: 7rem;
-    width: auto;
-}
-
-.card.futureProject:hover {
-    max-height: 1000rem;
-    height: 18rem;
-}
+/* futureProject and coming_soon_icon removed */

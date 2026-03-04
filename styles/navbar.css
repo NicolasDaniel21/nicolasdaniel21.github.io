@@ -160,10 +160,6 @@ nav li:first-child {
   transition: 0.5s;
 }
 
-.logoDescription:hover {
-  color: white;
-}
-
 .navBar {
   background-color: #000000;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
