@@ -18,30 +18,9 @@
     padding: 0.5rem;
     left: 0px;
     top: 0;
-    bottom: 0;
+    height: 100%;
     font-family: 'Freeman', sans-serif;
     user-select: none;
-}
-
-.resumes_row {
-    display: flex;
-    gap: 23rem;
-    top: 1rem;
-    position: static;
-    align-items: center;
-    right: 15rem;
-    position: relative;
-}
-
-.resume {
-    transform: scale(10);
-    transition: 0.5s;
-    background-color: black;
-    border-radius: 0.2rem;
-    height: 2rem;
-    max-height: 1.5rem;
-
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .curriculum_section {
@@ -50,25 +29,37 @@
     justify-content: center;
 }
 
-.resume:hover {
-    transform: scale(12);
-    color: white
+.resumes_container {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
 }
 
-#resumes_description_row {
-    font-family: 'Freeman', sans-serif;
-    top: -10rem;
-    right: -13.9rem;
-    position: relative;
-    color: white;
-    width: 31rem;
+.resume_item {
     display: flex;
-    gap: 19.3rem;
-    height: 2rem;
-    font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.resume {
+    font-size: 10rem;
+    background-color: black;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.resume:hover {
+    transform: scale(1.2);
+    color: white;
 }
 
 #RESUME, #COVER-LETTER {
+    font-family: 'Freeman', sans-serif;
+    font-size: 2rem;
+    color: white;
+    white-space: nowrap;
     transition: 0.3s linear;
 }
 

@@ -5,19 +5,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     font-family: 'Freeman', sans-serif;
 }
 
 .projects_section .row {
-    position: relative;
-    top: 12rem;
     display: flex;
-    width: 30rem;
     flex-wrap: nowrap;
-    right: 10rem;
     gap: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects_section .col-md-6 {
@@ -218,7 +217,7 @@
     background-color: black;
     padding: 0.5rem;
     top: 0;
-    bottom: -10px;
+    height: 100%;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     text-align: center;
@@ -226,7 +225,6 @@
     position: absolute;
     font-size: 4.19rem;
     left: 0px;
-    height: 950px;
     user-select: none;
     font-family: 'Freeman', sans-serif;
 }

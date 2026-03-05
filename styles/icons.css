@@ -16,14 +16,13 @@
     position: relative;
 }
 
-#harvard_icon {
+/* #harvard_icon {
     border-radius: 0.7rem;
     height: 54px;
     width: auto;
-    /* left: 1431px; */
     top: -3px;
     position: relative;
-}
+} */
 
 #topway_icon {
     height: 53px;

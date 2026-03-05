@@ -6,7 +6,7 @@
     padding: 0.5rem;
     writing-mode: vertical-rl;
     top: 0;
-    bottom: 0;
+    height: 100%;
     transform: rotate(-180deg);
     text-align: center;
     margin: 0px;

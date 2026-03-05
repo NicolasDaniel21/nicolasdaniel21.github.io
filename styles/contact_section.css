@@ -18,8 +18,7 @@
     padding: 0.5rem;
     left: 0px;
     top: 0;
-    height: 950px;
-    bottom: 0;
+    height: 100%;
     font-family: 'Freeman', sans-serif;
     user-select: none;
 }

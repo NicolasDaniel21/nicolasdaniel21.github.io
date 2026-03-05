@@ -17,10 +17,8 @@
     background-color: black;
     padding: 0.5rem;
     left: 0px;
-    /* height: 729px; */
-    /* height: 760px; */
-    top: 0px;
-    bottom: -10px;
+    top: 0;
+    height: 100%;
     font-family: 'Freeman', sans-serif;
     user-select: none;
     width: 6rem;
@@ -33,7 +31,7 @@
     font-size: 20px;
     left: 118px;
     position: relative;
-    top: -19rem;
+    top: -8rem;
     text-align: left;
     width: 91%;
     margin: 1rem;
@@ -43,7 +41,7 @@
 
 #icons {
     position: relative;
-    top: 12.2rem;
+    top: 19rem;
     right: -62rem;
     display: flex;
     flex-direction: column;
