@@ -5,13 +5,13 @@
     background-color: black;
     padding: 0.5rem;
     writing-mode: vertical-rl;
-    top: 145rem;
+    top: 0;
+    bottom: 0;
     transform: rotate(-180deg);
     text-align: center;
     margin: 0px;
     position: absolute;
     font-size: 4.19rem;
-    height: 81vh;
     left: 0px;
     font-family: 'Freeman', sans-serif;
     user-select: none;
@@ -21,11 +21,7 @@
     display: flex;
     flex-direction: column;
     height: 110vh;
-}
-  
-#experiences_title {
-    align-self: flex-start;
-    margin: 0;
+    position: relative;
 }
 
 #altus_box, #adp_box {

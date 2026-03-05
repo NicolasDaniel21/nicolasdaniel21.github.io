@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 #curriculum_title {
@@ -16,7 +17,8 @@
     background-color: black;
     padding: 0.5rem;
     left: 0px;
-    height: 739px;
+    top: 0;
+    bottom: 0;
     font-family: 'Freeman', sans-serif;
     user-select: none;
 }

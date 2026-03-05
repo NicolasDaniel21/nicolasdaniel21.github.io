@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 #education_title {
@@ -16,7 +17,10 @@
     background-color: black;
     padding: 0.5rem;
     left: 0px;
-    height: 729px;
+    /* height: 729px; */
+    /* height: 760px; */
+    top: 0px;
+    bottom: -10px;
     font-family: 'Freeman', sans-serif;
     user-select: none;
     width: 6rem;

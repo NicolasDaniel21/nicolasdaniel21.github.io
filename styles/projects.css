@@ -22,7 +22,7 @@
 
 .projects_section .col-md-6 {
     position: relative;
-    top: 0px;
+    top: -0px;
 }
 
 .projects_section .button-container {
@@ -195,26 +195,38 @@
     top: -11px;
 }
 
+/* devMatch button: green */
+.projects_section .card.devMatch .access-project {
+    background: #28a745; /* bootstrap-success green */
+    color: #fff;
+}
+.projects_section .card.devMatch .access-project:hover {
+    background: #218838;
+}
+
 .projects_section .card.devMatch .projectDescription {
     font-size: 14px;
     text-align: center;
 }
 
-
+.projects_section {
+    position: relative;
+}
 
 #projects_title {
     color: #4acbd9d0;
     background-color: black;
     padding: 0.5rem;
-    top: 209rem;
+    top: 0;
+    bottom: -10px;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     text-align: center;
     margin: 0px;
     position: absolute;
     font-size: 4.19rem;
-    height: 743px;
     left: 0px;
+    height: 950px;
     user-select: none;
+    font-family: 'Freeman', sans-serif;
 }
-/* futureProject and coming_soon_icon removed */
