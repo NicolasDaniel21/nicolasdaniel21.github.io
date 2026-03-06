@@ -69,10 +69,10 @@
 #aboutMe_text {
     transition: 1s;
     color: #dfeef9;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Freeman', sans-serif;
     font-size: 1.8rem; /* increased for readability */
     line-height: 1.9;
-    max-width: 1350px;
+    max-width: 1550px;
     margin: 0 auto;
     text-align: left;
     overflow: visible;
