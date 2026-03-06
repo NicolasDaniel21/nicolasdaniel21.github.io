@@ -139,10 +139,6 @@ nav li:first-child {
   width: 51%;
 }
 
-.hideOnMobile .text#curriculum:hover::after {
-  width: 61%;
-}
-
 .logoLink {
   display: inline-block;
   overflow: hidden;
